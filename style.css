@@ -22,6 +22,7 @@ body, *{
     justify-content: center;
 
     min-height: 100vh;
+    min-height: 100svh;
     width: 100vw;
     max-width: 100%;
 
@@ -107,7 +108,7 @@ body, *{
     border-radius: 2em;
 
 }
-/* for .link and .link:hover only transition color, background-color and border-radius */
+
 .link, .link:hover{
     transition: color 0.2s ease-out, 
     background-color 0.2s ease-out, 
