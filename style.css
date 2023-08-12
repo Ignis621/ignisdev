@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=Rubik+Mono+One&display=swap');
+@import url('catppuccin.css');
+
+body, *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 16px;
+    color-scheme: dark;
+    color: var(--ctp-mocha-text);
+}
+
+:root{
+    --accent-color: var(--ctp-mocha-blue)
+}
+
+#content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100vw;
+    max-width: 100%;
+
+    background-image: url('images/icons.png');
+    background-repeat: repeat;
+    background-color: var(--ctp-mocha-crust);
+    background-blend-mode: overlay;
+    background-size: 16em;
+    background-position: center;
+    background-attachment:scroll;
+}
+
+.icon-pfp{
+    width: 10em;
+    height: 10em;
+    background-image: url('images/ignis_dropshadow.png');
+    background-size: cover;
+    transform: translateY(-5em);
+    margin-bottom: -3.5em;
+}
+
+.title-section{
+    margin-top: 5em !important;
+}
+
+.centered-text{
+    text-align: center;
+}
+
+.links-container{
+    display: flex;
+    flex-direction: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 1em;
+    width: 100%;
+    max-width: 40em;
+    /* prevent overflow by wrapping it*/
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.link{
+    padding: 1em;
+    /* vertiaclly align to center*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--ctp-mocha-crust);
+    color: var(--ctp-mocha-text);
+    text-decoration: none;
+    text-align: center;
+    border-radius: 2em;
+    transition: 0.2s;
+}
+
+a{
+    color: var(--ctp-mocha-text);
+    text-decoration: none;
+}
+
+.link:hover{
+    background-color: var(--accent-color);
+    color: var(--ctp-mocha-crust);
+    border-radius: 1em;
+    transition: 0.2s;
+}
+
+.section{
+    background-color: var(--ctp-mocha-base);
+    padding: 2em;
+    max-width: 40em;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.shadow{
+    box-shadow: 0 0 1em var(--ctp-mocha-crust);
+}
+
+.round-corners{
+    border-radius: 1em;
+}
+
+.outline{
+    outline: var(--ctp-mocha-overlay1) solid 0.1em;
+    
+}
+
+.block-margin{
+    margin-block: 1em;
+}
+
+
+p, h1, h2, h3, h4{
+    width: 100%;
+}
+
+h1{
+    font-size: 1.3em;
+}
+
+h2{
+    font-size: 1.2em;
+}
+
+h3{
+    font-size: 1.1em;
+}
+
+h4{
+    font-size: 1em;
+}
