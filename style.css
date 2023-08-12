@@ -20,6 +20,7 @@ body, *{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
     min-height: 100vh;
     width: 100vw;
     max-width: 100%;
@@ -30,7 +31,33 @@ body, *{
     background-blend-mode: overlay;
     background-size: 16em;
     background-position: center;
-    background-attachment:scroll;
+    background-attachment: fixed;
+}
+
+.padding{
+    padding: 2em;
+}
+
+.padding-block{
+    padding-block: 2em;
+    padding-inline: 1em;
+}
+
+.padding-inline{
+    padding-block: 1em;
+    padding-inline: 2em;
+}
+
+.margin-block{
+    margin-block: 1em;
+}
+
+.margin-inline{
+    margin-inline: 1em;
+}
+
+.spacer-block{
+    margin-block: 0.5em;
 }
 
 .icon-pfp{
@@ -58,42 +85,65 @@ body, *{
     gap: 1em;
     width: 100%;
     max-width: 40em;
-    /* prevent overflow by wrapping it*/
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    
 }
+
+/* Smaller gap on mobile */
+@media only screen and (max-width: 600px) {
+    .links-container {
+      gap: 0.5em;
+    }
+  }
 
 .link{
     padding: 1em;
-    /* vertiaclly align to center*/
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--ctp-mocha-crust);
-    color: var(--ctp-mocha-text);
-    text-decoration: none;
+
     text-align: center;
     border-radius: 2em;
-    transition: 0.2s;
+
+}
+/* for .link and .link:hover only transition color, background-color and border-radius */
+.link, .link:hover{
+    transition: color 0.2s ease-out, 
+    background-color 0.2s ease-out, 
+    border-radius 0.2s ease-out;
 }
 
-a{
+
+.link-primary{
+    background-color: var(--ctp-mocha-crust);
     color: var(--ctp-mocha-text);
-    text-decoration: none;
 }
 
-.link:hover{
+.link-primary:hover{
     background-color: var(--accent-color);
     color: var(--ctp-mocha-crust);
     border-radius: 1em;
-    transition: 0.2s;
+}
+
+.link-secondary{
+    background-color: var(--ctp-mocha-base);
+    color: var(--ctp-mocha-text);
+    border-radius: 2em;
+}
+
+.link-secondary:hover{
+    background-color: var(--ctp-mocha-mantle);
+    color: var();
+}
+
+.links-container > a {
+    color: var(--ctp-mocha-text);
+    text-decoration: none;
 }
 
 .section{
     background-color: var(--ctp-mocha-base);
-    padding: 2em;
     max-width: 40em;
     width: 95%;
     display: flex;
@@ -115,27 +165,30 @@ a{
     
 }
 
-.block-margin{
-    margin-block: 1em;
-}
-
-
 p, h1, h2, h3, h4{
     width: 100%;
 }
 
 h1{
-    font-size: 1.3em;
+    font-size: 1.8em;
 }
 
 h2{
-    font-size: 1.2em;
+    font-size: 1.6em;
 }
 
 h3{
-    font-size: 1.1em;
+    font-size: 1.4em;
 }
 
 h4{
+    font-size: 1.3em;
+}
+
+h5{
+    font-size: 1.2em;
+}
+
+h6{
     font-size: 1em;
 }
