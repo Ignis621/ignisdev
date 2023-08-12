@@ -35,30 +35,14 @@ body, *{
     background-attachment: fixed;
 }
 
-.padding{
-    padding: 2em;
-}
-
-.padding-block{
-    padding-block: 2em;
-    padding-inline: 1em;
-}
-
-.padding-inline{
-    padding-block: 1em;
-    padding-inline: 2em;
-}
-
-.margin-block{
-    margin-block: 1em;
-}
-
-.margin-inline{
-    margin-inline: 1em;
-}
-
-.spacer-block{
-    margin-block: 0.5em;
+.section{
+    background-color: var(--ctp-mocha-base);
+    max-width: 40em;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .icon-pfp{
@@ -90,13 +74,6 @@ body, *{
     justify-content: center;
     align-items: center;
 }
-
-/* Smaller gap on mobile */
-@media only screen and (max-width: 600px) {
-    .links-container {
-      gap: 0.5em;
-    }
-  }
 
 .link{
     padding: 1em;
@@ -143,16 +120,6 @@ body, *{
     text-decoration: none;
 }
 
-.section{
-    background-color: var(--ctp-mocha-base);
-    max-width: 40em;
-    width: 95%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
 .shadow{
     box-shadow: 0 0 1em var(--ctp-mocha-crust);
 }
@@ -162,11 +129,67 @@ body, *{
 }
 
 .outline{
-    outline: var(--ctp-mocha-overlay1) solid 0.1em;
-    
+    outline: var(--ctp-mocha-overlay1) solid 0.1em;   
 }
 
-p, h1, h2, h3, h4{
+.padding{
+    padding: 2em;
+}
+
+.padding-block{
+    padding-block: 2em;
+    padding-inline: 1em;
+}
+
+.padding-inline{
+    padding-block: 1em;
+    padding-inline: 2em;
+}
+
+.margin-block{
+    margin-block: 1em;
+}
+
+.margin-inline{
+    margin-inline: 1em;
+}
+
+.spacer-block{
+    margin-block: 0.5em;
+}
+
+/* Mobile */
+@media only screen and (max-width: 600px) {
+    .links-container {
+        gap: 0.5em;
+    }
+        
+    .padding{
+        padding: 1em;
+    }
+
+    .padding-block{
+        padding-block: 1em;
+        padding-inline: .5em;
+    }
+
+    .padding-inline{
+        padding-block: .5em;
+        padding-inline: 1em;
+    }
+
+    .icon-pfp{
+        transform: translateY(-5em);
+        margin-bottom: -4.5em;
+    }
+  }
+
+*::selection {
+    color: var(--ctp-mocha-crust);
+    background-color: var(--accent-color);
+}
+
+p, h1, h2, h3, h4, h5, h6{
     width: 100%;
 }
 
