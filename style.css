@@ -1,6 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=Rubik+Mono+One&display=swap');
 @import url('catppuccin.css');
 
+/*
+:root{
+    --accent-color: var(--ctp-mocha-blue)
+}
+*/
+
+/* for dark mode only */
+@media (prefers-color-scheme: dark){
+    :root{
+        --crust: var(--ctp-mocha-crust);
+        --mantle: var(--ctp-mocha-mantle);
+        --base: var(--ctp-mocha-base);
+        --overlay1: var(--ctp-mocha-overlay1); 
+        --text: var(--ctp-mocha-text);
+        --accent-color: var(--ctp-mocha-blue);
+        --shadow: var(--ctp-mocha-crust);
+    }
+}
+@media (prefers-color-scheme: light){
+    :root{
+        --crust: var(--ctp-latte-crust);
+        --mantle: var(--ctp-laette-mantle);
+        --base: var(--ctp-latte-base);
+        --overlay1: var(--ctp-latte-overlay1); 
+        --text: var(--ctp-latte-text);
+        --accent-color: var(--ctp-latte-blue);
+        --shadow: var(--ctp-mocha-subtext0);
+    }
+}
+
 body, *{
     margin: 0;
     padding: 0;
@@ -8,11 +38,7 @@ body, *{
     font-family: 'IBM Plex Mono', monospace;
     font-size: 16px;
     color-scheme: dark;
-    color: var(--ctp-mocha-text);
-}
-
-:root{
-    --accent-color: var(--ctp-mocha-blue)
+    color: var(--text);
 }
 
 #content{
@@ -28,7 +54,7 @@ body, *{
 
     background-image: url('images/icons.png');
     background-repeat: repeat;
-    background-color: var(--ctp-mocha-crust);
+    background-color: var(--crust);
     background-blend-mode: overlay;
     background-size: 16em;
     background-position: center;
@@ -36,7 +62,7 @@ body, *{
 }
 
 .section{
-    background-color: var(--ctp-mocha-base);
+    background-color: var(--base);
     max-width: 40em;
     width: 95%;
     display: flex;
@@ -94,34 +120,34 @@ body, *{
 
 
 .link-primary{
-    background-color: var(--ctp-mocha-crust);
-    color: var(--ctp-mocha-text);
+    background-color: var(--crust);
+    color: var(--text);
 }
 
 .link-primary:hover{
     background-color: var(--accent-color);
-    color: var(--ctp-mocha-crust);
+    color: var(--crust);
     border-radius: 1em;
 }
 
 .link-secondary{
-    background-color: var(--ctp-mocha-base);
-    color: var(--ctp-mocha-text);
+    background-color: var(--base);
+    color: var(--text);
     border-radius: 2em;
 }
 
 .link-secondary:hover{
-    background-color: var(--ctp-mocha-mantle);
-    color: var();
+    background-color: var(--mantle);
+    color: var(--text);
 }
 
 .links-container > a {
-    color: var(--ctp-mocha-text);
+    color: var(--text);
     text-decoration: none;
 }
 
 .shadow{
-    box-shadow: 0 0 1em var(--ctp-mocha-crust);
+    box-shadow: 0 0 1em var(--shadow);
 }
 
 .round-corners{
@@ -129,7 +155,7 @@ body, *{
 }
 
 .outline{
-    outline: var(--ctp-mocha-overlay1) solid 0.1em;   
+    outline: var(--overlay1) solid 0.1em;   
 }
 
 .padding{
@@ -185,7 +211,7 @@ body, *{
   }
 
 *::selection {
-    color: var(--ctp-mocha-crust);
+    color: var(--crust);
     background-color: var(--accent-color);
 }
 
