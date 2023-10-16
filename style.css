@@ -189,8 +189,29 @@ body, *{
     background-color: var(--accent-color);
 }
 
-p, h1, h2, h3, h4, h5, h6{
+li > a{
+    color: var(--accent-color);
+}
+
+li > a:hover{
+    color: var(--ctp-mocha-crust);
+    background-color: var(--accent-color);
+}
+
+li > a, li > a:hover{
+    transition: color 0.1s ease-out, 
+    background-color 0.1s ease-out, 
+    border-radius 0.1s ease-out;
+}
+
+
+p, h1, h2, h3, h4, h5, h6, ul{
     width: 100%;
+}
+
+ul{
+    list-style-type:disc;
+    padding-inline-start: 1em;
 }
 
 h1{
