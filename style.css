@@ -1,11 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=Rubik+Mono+One&display=swap');
-@import url('catppuccin.css');
-
-/*
-:root{
-    --accent-color: var(--ctp-mocha-blue)
-}
-*/
+@import url('colors.css');
 
 /* for dark mode only */
 @media (prefers-color-scheme: dark){
