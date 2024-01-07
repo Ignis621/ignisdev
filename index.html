@@ -3,103 +3,178 @@
 <head>
     <meta charset="utf-8"/>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=0">
 
-    <meta property="og:title" content="ignisdev.xyz" />
+    <!-- open graph, for embeds on several platforms -->
+    <meta property="og:title" content="ignis" />
     <meta property="og:url" content="https://ignisdev.xyz/" />
-    <meta property="og:description" content="website of the dragonwolf guy" />
+    <meta property="og:description" content="website of the dragonwolf guy. links, about, projects and some more" />
+    <meta property="og:image" content="images/ignis.png" />
+
+    <meta name="description" content="website of the dragonwolf guy. links, about, projects and some more">
+    <meta name="title" content="ignis">
+    <meta name="author" content="Ignis621">
+    <meta name="keywords" content="Ignis, Ignis621, dragonwolf, furry">
 
     <link rel="icon" type="image/png" href="images/icon-black.png" media="(prefers-color-scheme: light)">
     <link rel="icon" type="image/png" href="images/icon-white.png" media="(prefers-color-scheme: dark)">
 
-    <meta name="title" content="ignisdev.xyz">
-    <meta name="author" content="Ignis621">
-    <meta name="keywords" content="Ignis, Ignis621, dragonwolf, furry">
-    <meta name="darkreader-lock">
-    
     <meta name="theme-color" content="#11111b" media="(prefers-color-scheme: dark)"/>
     <meta name="theme-color" content="#dce0e8" media="(prefers-color-scheme: light)"/>
-    
-    <meta name="description" content="website of the dragonwolf guy">
+
+    <meta name="msapplication-navbutton-color" content="#11111b" media="(prefers-color-scheme: dark)">
+    <meta name="msapplication-navbutton-color" content="#dce0e8" media="(prefers-color-scheme: light)">
+
+    <meta name="apple-mobile-web-app-status-bar-style" content="#11111b" media="(prefers-color-scheme: dark)">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#dce0e8" media="(prefers-color-scheme: light)">
+
+    <meta name="darkreader-lock"> 
 
     <link rel="stylesheet" href="style.css" type="text/css"/>
 
-    <title>ignisdev.xyz</title>
+    <title>ignis</title>
 </head>
 <body>
 
-    <div id="content">
+    <!-- 
+    <div id="navbar-container">
 
-        <div class="title-section section margin-block padding outline round-corners shadow">
-
-            <div class="icon-pfp outline round-corners shadow"></div>
-
-            <div class="centered-text">
-                <h5>Ignis</h5> 
-                <p>he/him</p>
-            </div>
-        </div>
-
-        <div class="section margin-block padding-block outline round-corners shadow ">
-            <div class="links-container">
-
-                <a href="https://discord.com/users/373859854676131841">
-                    <div class="link link-primary">
-                        Discord
-                    </div>
-                </a>
-
-                <a href="https://steamcommunity.com/id/Ignis621/">
-                    <div class="link link-primary">
-                        Steam
-                    </div>
-                </a>
-
-                <a href="https://bsky.app/profile/ignis621.bsky.social">
-                    <div class="link link-primary">
-                        Bluesky
-                    </div>
-                </a>
-
-                <a href="https://twitter.com/ignis_furry">
-                    <div class="link link-primary">
-                        Twitter
-                    </div>
-                </a>
-
-                <a href="https://mastodon.social/@ignis621">
-                    <div class="link link-primary">
-                        Mastodon
-                    </div>
-                </a>
-
-                <a href="https://www.youtube.com/@ignis621">
-                    <div class="link link-primary">
-                        YouTube
-                    </div>
-                </a>
-
-                <a href="https://github.com/Ignis621">
-                    <div class="link link-primary">
-                        GitHub
-                    </div>
-                </a>
-
-                <a href="https://open.spotify.com/user/to44dku2dsn9j8q08i6v8aujb">
-                    <div class="link link-primary">
-                        Spotify
-                    </div>
-                </a>
-
-                <!--
-                <a href="more.html">
-                    <div class="link link-secondary">
-                        More 
-                    </div>
-                </a>
-                -->
-
-            </div>
+        <div id="navbar-links" class="blurry-backdrop">
+            <a href="#about" class="navbar-link">about</a>
+            <a href="#projects" class="navbar-link">projects</a>
+            <a href="#attribution" class="navbar-link">attribution</a>
         </div>
     </div>
+    -->
+
+    <!-- this is for the entire site -->
+    <div id="container"> 
+
+         <!-- this is just for sections -->
+        <div id="content">
+
+            <!-- this is a unique section, as it houses the profile: links, logo and short bio -->
+            <div id="profile-section">
+
+                <div id="profile-container">
+                    <div id="profile-links-left" class="links hide-text">
+                        <a href="https://discord.com/users/373859854676131841" target="_blank" class="profile-link icon-discord outline">discord</a>
+                        <a href="https://twitter.com/ignis_furry" target="_blank" class="profile-link icon-twitter outline">twitter</a>
+                        <a href="https://www.youtube.com/@ignis621" target="_blank" class="profile-link icon-youtube outline">youtube</a>
+                    </div>
+    
+                    <div id="logo-container" class="outline circle fill">
+                        <div id="logo-image" class="circle" title="you can pet me!"></div>
+                    </div>
+    
+                    <div id="profile-links-right" class="links hide-text">
+                        <a href="https://github.com/Ignis621" target="_blank" class="profile-link icon-github outline">github</a>
+                        <a href="https://itch.io/profile/ignis621" target="_blank" class="profile-link icon-itch outline">itch</a>
+                        <a href="https://bsky.app/profile/ignis621.bsky.social" target="_blank" class="profile-link icon-bluesky outline">bluesky</a>
+                    </div>
+                    
+                </div>
+            
+                <h1>hey, i'm ignis</h1>
+
+                <h2><span class="emojis-inline">🇵🇱🏳️‍🌈</span> &centerdot; he/him</h2>
+
+            </div>
+
+            <div class="section fill outline">
+                <div class="section-title fill outline">
+                    <h3>about</h3>
+                </div>
+
+                <p>silly goober from poland</p>
+
+                <p>tech geek. i like hacking and modding old hardware. used to work in unity+c#, <a href="https://www.forbes.com/sites/paultassi/2023/09/24/unity-says-it-removed-its-terms-of-service-because-the-views-were-so-low/" target="_blank">lost hope in unity</a>, and now learning godot and rust. i do a bunch of scripting in python and i also like web development</p> 
+
+                <p>i used to use a really old laptop as a homelab, but it killed itself. saving up for a new one</p>
+
+                <p>besides that i can do a bit of pixelart and im trying to learn digital drawing. oh and im learning norwegian, wanna move there one day</p>
+
+                <p>fav games:</p>
+                <ul>
+                    <li>deep rock galactic</li>
+                    <li>cult of the lamb</li>
+                    <li>beat saber</li>
+                    <li>road 96</li>
+                    <li>the long drive</li>
+                </ul>
+
+                <p>future plans:</p>
+                <ul>   
+                    <li>fully develop brain</li>
+                    <li>build a new homelab</li>
+                    <li>learn js framework <a href="https://vuejs.org/" target="_blank">vuejs</a></li>
+                    <li>learn php and mysql</li>
+                </ul>
+
+                <p>i mostly listen to progressive house/edm but also enjoy techno, breakcore, d&b and metal. my favorite artist is deadmau5 <3</p>
+                    
+                <p>huge fan of dreamworks movies, thirsting over death</p>
+                    
+                <p>daily driving arch linux on my x260, will use it on main soon&trade;</p>
+                    
+                <p>oh and im a furry, if you couldn't tell x3</p>
+            </div>
+
+            <div class="section fill outline">
+                <div class="section-title fill outline">
+                    <h3>projects</h3>
+                </div>
+
+                <p>not a lot of them, but here are the ones that are somewhat good</p>
+
+                <div id="projects-container">
+    
+                    <div class="project outline">
+                        <div class="project-description">
+                            <p><span class="bold">pomojs</span> - minimal pomodoro timer made in vanilla js</p>
+                        </div>
+    
+                        <div class="project-links hide-text">
+                            <a href="https://github.com/Ignis621/PomoJS" target="_blank" class="project-link icon-github outline">github</a>
+                            <a href="https://pomojs.ignisdev.xyz" target="_blank" class="project-link icon-external outline">website</a>
+                        </div>                    
+                    </div>
+
+                    <div class="project outline">
+                        <div class="project-description">
+                            <p><span class="bold">add that ad</span> - gmtk game jam 2023 entry made with friends</p>
+                        </div>
+    
+                        <div class="project-links hide-text">
+                            <a href="https://nimfer.itch.io/add-that-ad" target="_blank" class="project-link icon-external outline">itch</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section fill outline">
+                <div class="section-title fill outline">
+                    <h3>attribution</h3>
+                </div>
+                
+                <p>things i used in this website. awesome projects by the way!</p>
+                
+                <ul>
+                    <li>color scheme <a href="https://github.com/catppuccin/catppuccin" target="_blank">catppuccin</a></li>
+                    <li>some icons <a href="https://feathericons.com/" target="_blank">feathericons</a></li>
+                    <li>api for animal images <a href="https://tinyfox.dev" target="_blank">tinyfox.dev</a></li>
+                </ul>
+
+            </div>
+
+            
+        </div>
+
+    </div> 
+
+    <div id="to-top" class="fill">↑ back to top</div>
+
+    <script src="scripts/to_top.js"></script>
+    <script src="scripts/chromium_emoji_fix.js"></script>
+
 </body>

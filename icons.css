@@ -1,0 +1,122 @@
+/* i swear i couldnt find a better way do to this. messy, but this works. */
+
+/* MOCHA/DARK */
+@media (prefers-color-scheme: dark){
+    .icon-discord{
+        background-image: url('images/logos/mocha/discord-white.svg');
+    }
+    .icon-github{
+        background-image: url('images/logos/mocha/github-white.svg');
+    }
+    .icon-twitter{
+        background-image: url('images/logos/mocha/twitter-white.svg');
+    }
+    .icon-youtube{
+        background-image: url('images/logos/mocha/youtube-white.svg');
+    }
+    .icon-steam{
+        background-image: url('images/logos/mocha/steam-white.svg');
+    }
+    .icon-spotify{
+        background-image: url('images/logos/mocha/spotify-white.svg');
+    }
+    .icon-external{
+        background-image: url('images/logos/mocha/external-white.svg');
+    }
+    .icon-itch{
+        background-image: url('images/logos/mocha/itch-white.svg');
+    }
+    .icon-bluesky{
+        background-image: url('images/logos/mocha/bluesky-white.svg');
+    }
+
+    /* HOVER */
+    .icon-discord:hover{
+        background-image: url('images/logos/mocha/discord-black.svg');
+    }
+    .icon-github:hover{
+        background-image: url('images/logos/mocha/github-black.svg');
+    }
+    .icon-twitter:hover{
+        background-image: url('images/logos/mocha/twitter-black.svg');
+    }
+    .icon-youtube:hover{
+        background-image: url('images/logos/mocha/youtube-black.svg');
+    }
+    .icon-steam:hover{
+        background-image: url('images/logos/mocha/steam-black.svg');
+    }
+    .icon-spotify:hover{
+        background-image: url('images/logos/mocha/spotify-black.svg');
+    }
+    .icon-external:hover{
+        background-image: url('images/logos/mocha/external-black.svg');
+    }
+    .icon-itch:hover{
+        background-image: url('images/logos/mocha/itch-black.svg');
+    }
+    .icon-bluesky:hover{
+        background-image: url('images/logos/mocha/bluesky-black.svg');
+    }
+}
+
+/* LATTE/LIGHT */
+@media (prefers-color-scheme: light){ 
+    .icon-discord{
+        background-image: url('images/logos/latte/discord-black.svg');
+    }
+    .icon-github{
+        background-image: url('images/logos/latte/github-black.svg');
+    }
+    .icon-twitter{
+        background-image: url('images/logos/latte/twitter-black.svg');
+    }
+    .icon-youtube{
+        background-image: url('images/logos/latte/youtube-black.svg');
+    }
+    .icon-steam{
+        background-image: url('images/logos/latte/steam-black.svg');
+    }
+    .icon-spotify{
+        background-image: url('images/logos/latte/spotify-black.svg');
+    }
+    .icon-external{
+        background-image: url('images/logos/latte/external-black.svg');
+    }
+    .icon-itch{
+        background-image: url('images/logos/latte/itch-black.svg');
+    }
+    .icon-bluesky{
+        background-image: url('images/logos/latte/bluesky-black.svg');
+    }
+    
+    /* HOVER */
+    .icon-discord:hover{
+        background-image: url('images/logos/latte/discord-white.svg');
+    }
+    .icon-github:hover{
+        background-image: url('images/logos/latte/github-white.svg');
+    }
+    .icon-twitter:hover{
+        background-image: url('images/logos/latte/twitter-white.svg');
+    }
+    .icon-youtube:hover{
+        background-image: url('images/logos/latte/youtube-white.svg');
+    }
+    .icon-steam:hover{
+        background-image: url('images/logos/latte/steam-white.svg');
+    }
+    .icon-spotify:hover{
+        background-image: url('images/logos/latte/spotify-white.svg');
+    }
+    .icon-external:hover{
+        background-image: url('images/logos/latte/external-white.svg');
+    }
+    .icon-itch:hover{
+        background-image: url('images/logos/latte/itch-white.svg');
+    }
+    .icon-bluesky:hover{
+        background-image: url('images/logos/latte/bluesky-white.svg');
+    }
+
+}

@@ -1,259 +1,413 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=Rubik+Mono+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=JetBrains+Mono:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Noto+Color+Emoji&display=swap');
 @import url('colors.css');
+@import url('icons.css');
 
-/* for dark mode only */
 @media (prefers-color-scheme: dark){
     :root{
         --crust: var(--ctp-mocha-crust);
         --mantle: var(--ctp-mocha-mantle);
         --base: var(--ctp-mocha-base);
+        --surface0: var(--ctp-mocha-surface0); 
+        --surface1: var(--ctp-mocha-surface1); 
+        --overlay0: var(--ctp-mocha-overlay0); 
         --overlay1: var(--ctp-mocha-overlay1); 
         --text: var(--ctp-mocha-text);
-        --accent-color: var(--ctp-mocha-blue);
-        --shadow: var(--ctp-mocha-crust);
+        --accent-color: var(--ctp-mocha-mauve);
+    }
+    body, *{
+        color-scheme: dark;
     }
 }
+
 @media (prefers-color-scheme: light){
     :root{
         --crust: var(--ctp-latte-crust);
-        --mantle: var(--ctp-laette-mantle);
+        --mantle: var(--ctp-latte-mantle);
         --base: var(--ctp-latte-base);
+        --surface0: var(--ctp-latte-surface0); 
+        --surface1: var(--ctp-latte-surface1); 
+        --overlay0: var(--ctp-latte-overlay0); 
         --overlay1: var(--ctp-latte-overlay1); 
         --text: var(--ctp-latte-text);
-        --accent-color: var(--ctp-latte-blue);
-        --shadow: var(--ctp-mocha-subtext0);
+        --accent-color: var(--ctp-latte-mauve);
     }
+    body, *{
+        color-scheme: light;
+    }
+}
+
+:root{
+    -webkit-tap-highlight-color: transparent; /* fix for blue highlight on press on mobile chromium-based browsers */
 }
 
 body, *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 16px;
+    box-sizing: border-box;    
     color-scheme: dark;
+
+}
+
+body{
+    font-size: 16px;    
+    font-family: 'JetBrains Mono', monospace;
     color: var(--text);
-}
+}   
 
-#content{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    min-height: 100vh;
-    min-height: 100svh;
-    width: 100vw;
-    max-width: 100%;
-
-    background-image: url('images/icons.png');
-    background-repeat: repeat;
-    background-color: var(--crust);
-    background-blend-mode: overlay;
-    background-size: 16em;
-    background-position: center;
-    background-attachment: fixed;
-}
-
-.section{
-    background-color: var(--base);
-    max-width: 40em;
-    width: 95%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.icon-pfp{
-    width: 10em;
-    height: 10em;
-    background-image: url('images/ignis_dropshadow.png');
-    background-size: cover;
-    transform: translateY(-5em);
-    margin-bottom: -3.5em;
-}
-
-.title-section{
-    margin-top: 5em !important;
-}
-
-.centered-text{
-    text-align: center;
-}
-
-.links-container{
-    display: flex;
-    flex-direction: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
-    gap: 1em;
-    width: 100%;
-    max-width: 40em;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-}
-
-.link{
-    padding: 1em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    text-align: center;
-    border-radius: 2em;
-
-}
-
-.link, .link:hover{
-    transition: color 0.2s ease-out, 
-    background-color 0.2s ease-out, 
-    border-radius 0.2s ease-out;
-}
-
-
-.link-primary{
-    background-color: var(--crust);
-    color: var(--text);
-}
-
-.link-primary:hover{
-    background-color: var(--accent-color);
-    color: var(--crust);
-    border-radius: 1em;
-}
-
-.link-secondary{
-    background-color: var(--base);
-    color: var(--text);
-    border-radius: 2em;
-}
-
-.link-secondary:hover{
-    background-color: var(--mantle);
-    color: var(--text);
-}
-
-.links-container > a {
-    color: var(--text);
-    text-decoration: none;
-}
-
-.shadow{
-    box-shadow: 0 0 1em var(--shadow);
-}
-
-.round-corners{
-    border-radius: 1em;
-}
-
-.outline{
-    outline: var(--overlay1) solid 0.1em;   
-}
-
-.padding{
-    padding: 2em;
-}
-
-.padding-block{
-    padding-block: 2em;
-    padding-inline: 1em;
-}
-
-.padding-inline{
-    padding-block: 1em;
-    padding-inline: 2em;
-}
-
-.margin-block{
-    margin-block: 1em;
-}
-
-.margin-inline{
-    margin-inline: 1em;
-}
-
-.spacer-block{
-    margin-block: 0.5em;
-}
-
-/* Mobile */
-@media only screen and (max-width: 600px) {
-    .links-container {
-        gap: 0.5em;
-    }
-        
-    .padding{
-        padding: 1em;
-    }
-
-    .padding-block{
-        padding-block: 1em;
-        padding-inline: .5em;
-    }
-
-    .padding-inline{
-        padding-block: .5em;
-        padding-inline: 1em;
-    }
-
-    .icon-pfp{
-        transform: translateY(-5em);
-        margin-bottom: -4.5em;
-    }
-  }
-
-*::selection {
-    color: var(--crust);
-    background-color: var(--accent-color);
-}
-
-li > a{
-    color: var(--accent-color);
-}
-
-li > a:hover{
-    color: var(--ctp-mocha-crust);
-    background-color: var(--accent-color);
-}
-
-li > a, li > a:hover{
-    transition: color 0.1s ease-out, 
-    background-color 0.1s ease-out, 
-    border-radius 0.1s ease-out;
-}
-
-
-p, h1, h2, h3, h4, h5, h6, ul{
-    width: 100%;
-}
-
-ul{
-    list-style-type:disc;
-    padding-inline-start: 1em;
+html{
+    scroll-behavior: smooth;
 }
 
 h1{
-    font-size: 1.8em;
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 700;
+    font-size: 1.5em;
+    margin-block: 0.5em;
 }
-
 h2{
-    font-size: 1.6em;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 1.2em;
+    font-weight: 400;
 }
 
 h3{
-    font-size: 1.4em;
-}
-
-h4{
-    font-size: 1.3em;
-}
-
-h5{
-    font-size: 1.2em;
-}
-
-h6{
+    font-family: 'IBM Plex Mono', monospace;
     font-size: 1em;
+    font-weight: 700;
+}
+
+.fill{
+    background-color: var(--crust);
+}
+
+.circle{
+    border-radius: 100%
+}
+
+.outline{
+    outline: 2px solid var(--text);
+}
+
+.blurry-backdrop{
+    backdrop-filter: blur(0.25em);  
+    background: color-mix(in srgb, var(--crust) 30%, transparent);
+}
+
+.dark-backdrop{
+    background: color-mix(in srgb, var(--crust) 80%, transparent);
+}
+
+.bold{
+    font-weight: 700;
+}
+
+.hide-text{
+    text-indent: -9999px;
+    white-space: nowrap;
+}
+
+.monochrome{
+    filter: grayscale(100%);
+}
+
+#container{
+    background-color: var(--crust);
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#content{
+    max-width: 48em;
+    width: 80%;
+    margin-block: 10em;
+}
+
+#content-marginless{
+    max-width: 48em;
+    width: 80%;
+}
+
+.section{
+    width: 100%;
+    margin-block: 2.5em;
+    padding: 1.5em;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1em;
+}
+
+.section-title{
+    width: fit-content;
+    white-space: nowrap;
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 700;
+    padding-right: 1.5em;
+    padding-left: 0.5em;
+    margin-top: -2.25em;
+    z-index: 1;
+}
+
+.section > img{
+    width: 100%;
+    outline: 2px solid var(--text);
+}
+
+#logo-container{
+    width: 12em;
+    height: 12em;
+    display: flex;  
+    justify-content: center;
+    align-items: center;
+    overflow:hidden;
+    padding:1em;
+    flex-shrink: 0;
+}
+
+#logo-image{
+    background-image: url('images/ignis.png');
+    width: 100%;
+    height: 100%;
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: grab;
+}
+
+#logo-image:active{
+    cursor: grabbing;
+}
+
+#profile-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+#profile-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-link{
+    width: 3.5em;
+    height: 3.5em;
+    border-radius: 100%;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 2.25em;
+}
+
+.links{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 7.5em;
+    gap: 1.5em;    
+}
+
+#profile-links-left{
+    align-items: center;
+}
+
+#profile-links-right{
+    align-items: center;
+}
+
+#profile-links-left > *:nth-child(2){
+    transform: translateX(-40%);
+}
+
+#profile-links-right > *:nth-child(2){
+    transform: translateX(40%);
+}
+
+/* accounting for whitespace */
+.icon-twitter{ background-position: 55% 55%; }
+.icon-bluesky{ background-position: 50% 55%; }
+
+#navbar-container{
+    width: 100%;
+    position:fixed;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    height:3em;
+}
+
+#navbar-links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    padding-inline: 1em;    
+}
+
+.navbar-link{
+    font-family: 'IBM Plex Mono', monospace;
+    text-decoration: none;
+    color: var(--text);
+    padding: 0.5em;
+}
+
+#projects-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 0.1em;
+}
+
+.project{
+    width: 100%;
+    min-height: 3em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.project-description{
+    align-self:center;
+    padding-inline: 1em;
+    padding-block: 0.5em; /* for when text gets squished into 2 lines */
+}
+
+.project-links{
+    align-self: flex-start;
+    display: flex;
+    gap: 0.1em;
+}
+
+.project-link{
+    width: 3em;
+    height: 3em;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 1.75em;
+}
+
+.profile-link:hover{
+    background-color: var(--text);
+}
+
+.img-banner{
+    width: 100%;
+    height: 20em !important;
+    object-fit: cover;
+    object-position: center;
+}
+
+#to-top{
+    position:fixed;
+    bottom: 1em;
+    left: 1em;
+    color: var(--text);
+    text-decoration: underline;
+    z-index: 3;
+    display: none;
+}
+
+#to-top:hover{
+    background-color: var(--text);
+    color: var(--crust);
+    cursor:pointer;
+}
+
+a{
+    color: inherit;
+    text-decoration: underline;
+}
+
+a:hover{
+    background-color: var(--text);
+    color: var(--crust)
+}
+
+li{
+    margin-left: 1em;
+    list-style-type: disc;
+}
+
+textarea{
+    background-color: var(--crust);
+    border: none;
+    outline: var(--text);
+    resize: vertical;
+}
+
+*{
+    scrollbar-width: 10px;
+    scrollbar-color: var(--overlay1) var(--crust);
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 0.5em;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: var(--crust);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--overlay1);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--text);
+} 
+
+::selection {
+    background-color: var(--surface1);
+}
+
+/* chromium fallback, since country flags wont work :p  
+a script will add .emoji-fix to all .emoji-inline classes if its on chromium */
+
+.emoji-fix{
+    font-family: 'Noto Color Emoji';
+}
+
+@media (max-width: 600px){
+    .section{
+        padding: 0.75em;
+    }
+    .section-title{
+        margin-top: -1.5em;
+    }
+    #content{
+        width: 95%;
+        margin-top: 2em;
+    }
+    .project-description{
+        padding-inline: 0.5em;
+        padding-block: 0;
+    }   
+    #profile-container{
+        width: 90%;
+    }
+    #to-top{
+        text-indent: -9999px;
+        white-space: nowrap;
+    }
+    #to-top:hover{
+        background-color: var(--crust)
+    }
 }
